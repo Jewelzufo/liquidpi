@@ -18,7 +18,7 @@
 
 ### Overview
 
-A lightweight, production-ready **Researcher–Critic** pattern that runs **entirely locally** via Ollama.  
+A lightweight, **Researcher–Critic** pattern that runs **entirely locally** via Ollama.  
 
 **Models**:
 
