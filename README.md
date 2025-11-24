@@ -1,4 +1,4 @@
-# LiquidPi 
+# Liquid-Granite 
 
 ## (Granite-4.0-350m Generator + LiquidAI-LFM2-350m Critic)
 
