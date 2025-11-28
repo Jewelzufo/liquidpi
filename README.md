@@ -18,7 +18,9 @@
 
 ### Overview
 
-A lightweight, **Researcher–Critic** pattern that runs **entirely locally** via Ollama.  
+A lightweight, **Researcher–Critic** pattern that runs **entirely locally** via Ollama. 
+
+>**Tested** | **Device**: *Raspberry Pi 5 (8gb RAM, MicroSD)* | **Date**: *11/2025* |
 
 **Models**:
 
