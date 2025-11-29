@@ -9,7 +9,7 @@
     <li><strong>Date:</strong> 2025-11-24</li>
     <li><strong>Version:</strong> 1.0</li>
     <li><strong>Author:</strong> Julian A. Gonzalez</li>
-    <li><strong>License:</strong> MIT</li>
+    <li><strong>License:</strong> Apache 2.0</li>
   </ul>
 
 </details>
