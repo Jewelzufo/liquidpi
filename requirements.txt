@@ -1,2 +1,10 @@
-rich
-requests
+# Runtime Dependencies
+requests>=2.31.0
+rich>=13.7.0
+
+# Development & Testing Dependencies
+black
+isort
+mypy
+flake8
+
