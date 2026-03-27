@@ -1,6 +1,6 @@
 # Liquid-Granite
 
-## (Granite-4.0-350m Generator + LiquidAI-LFM2-350m Critic)
+## (LFM2.5-thinking Generator + Granite4:350m-h Critic)
 
 <details>
   <summary>Metadata</summary>
