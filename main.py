@@ -5,8 +5,8 @@ Author: Julian A. Gonzalez
 Pattern: Researcher-Critic (Reflection Pattern)
 
 This implementation creates a dual-agent system where:
-- Agent 1 (Generator): Produces initial responses using LFM2-1.2-instruct
-- Agent 2 (Critic): Evaluates and provides constructive feedback using Granite-4.0-h-350m
+- Agent 1 (Generator): Produces initial responses using LFM2.5-thinking
+- Agent 2 (Critic): Evaluates and provides constructive feedback using Granite4:350m-h
 - Coordinator: Manages the interaction loop and convergence
 
 Copyright 2025 Julian A. Gonzalez, 
@@ -130,8 +130,8 @@ Be thorough but fair. Your goal is to help improve the response, not to criticiz
 # MODEL CONFIGURATIONS
 # ============================================================================
 
-GENERATOR_MODEL = "jewelzufo/LFM2.5-1.2B"
-CRITIC_MODEL = "granite4:1b-h"
+GENERATOR_MODEL = "lfm2.5-thinking"
+CRITIC_MODEL = "granite4:350m-h"
 
 # ============================================================================
 # OLLAMA CLIENT
@@ -168,7 +168,7 @@ class OllamaClient:
         prompt: str, 
         system: str = "", 
         model: str = GENERATOR_MODEL,
-        temperature: float = 0.7,
+        temperature: float = 0.6,
         stream: bool = False
     ) -> str:
         """Generate a response from the model"""

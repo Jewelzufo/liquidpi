@@ -1,4 +1,4 @@
-# Liquid-Granite 
+# Liquid-Granite
 
 ## (Granite-4.0-350m Generator + LiquidAI-LFM2-350m Critic)
 
@@ -18,21 +18,24 @@
 
 ### Overview
 
-A lightweight, **Researcher–Critic** pattern that runs **entirely locally** via Ollama. 
+A lightweight, **Researcher–Critic** pattern that runs **entirely locally** via Ollama.
 
->**Tested** | **Device**: *Raspberry Pi 5 (8gb RAM, MicroSD)* | **Date**: *11/2025* |
+>**Tested** | **Device**: *Raspberry Pi 5 (8gb RAM, MicroSD)* | **Created**: *11/2025*, **Updated:** 03/27/2026 |
 
 **Models**:
 
-Generator uses:
-- `hf.co/unsloth/granite-4.0-350m-GGUF:Q4_K_M`
+**Generator uses:**
 
-Critic uses:
-- `hf.co/LiquidAI/LFM2-350M-GGUF`
+- `lfm2.5-thinking`
+
+**Critic uses:**
+
+- `granite4:350m-h`
 
 ---
 
 ## ✨ Features
+
 - **Zero cloud calls** – full privacy
 - **Streaming-ready** (CLI flag `--stream`)
 - **Automatic retries** with exponential back-off
@@ -49,22 +52,26 @@ Critic uses:
    Windows: download from [ollama.ai](https://ollama.ai)
 
 2. Pull the models
+
    ```bash
-   ollama pull hf.co/unsloth/granite-4.0-350m-GGUF:Q4_K_M
-   ollama pull hf.co/LiquidAI/LFM2-350M-GGUF:Q4_K_M
-   ```
-
+   ollama pull granite4:350m-h
+   ollama pull lfm2.5-thinking
 3. Clone / copy this repo
-   
-```bash
-   git clone <repo> && cd <repo>
-   python -m venv venv
-   source venv/bin/activate   # Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
 
-4. Run
-   
+```bash
+   git clone https://github.com/Jewelzufo/liquid-granite && cd
+   liquid-granite
+```
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+1. Run
+
 ```bash
    python liquidpi.py
    # or with streaming
@@ -73,7 +80,9 @@ Critic uses:
 
 ---
 
-📖 CLI Usage
+<br>
+
+# 📖 CLI Usage
 
 ```
 usage: liquidpi.py [-h] [--stream] [--iterations N] [--quiet]
@@ -87,7 +96,10 @@ optional arguments:
 
 ---
 
-🧠 How It Works
+<br>
+
+# 🧠 How It Works
+
 1. Generator produces an answer.  
 2. Critic scores it and gives concrete feedback.  
 3. Loop repeats until “no significant improvements needed” or max iterations.  
@@ -95,35 +107,20 @@ optional arguments:
 
 ---
 
-## 🔧 Extending / Self-Hosting
+<br>
+
+# 🔧 Extending / Self-Hosting
+
 - Implement `LLMClient` protocol to plug OpenAI, Gemini, etc.  
 - Change `GENERATOR_MODEL` / `CRITIC_MODEL` constants for new models.  
 - Wrap with FastAPI / Flask – the core `DualAgentCoordinator` is I/O agnostic.
 
 ---
 
-### 📄 License
+# 📄 License
 
-Apache 2.0 – see `LICENSE` file.
+**Apache 2.0** – see `LICENSE` file.
 
----
+<br>
 
-
-## requirements.txt
-
-```
-
-Core
-requests>=2.31.0
-rich>=13.7.0
-
-# Optional dev / quality tools (uncomment if desired)
-
-# black>=23.0
-# isort>=5.12
-# mypy>=1.5
-# flake8>=6.0
-
-```
-
-**@2025** [creativeact.net](www.creativeact.net)
+@2026 **CreativeAct Technologies**
